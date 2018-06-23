@@ -1,0 +1,152 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f3f7fb;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+
+}
+
+.login_page{
+    background-color: #f3f7fb;
+    height: 100%;
+}
+
+/*.jumbotron {*/
+   /*background-color: #f3f7fb;*/
+/*}*/
+
+.chat {
+    background-color: #f3f7fb;
+    box-sizing: border-box;
+    overflow: auto;
+    padding:  20px;
+    height: calc(100% - 160px);
+}
+
+.message {
+    font-size: 12px;
+    padding: 10px 20px;
+    transition: background-color 0.5s linear;
+    border-radius: 10px;
+}
+
+.message:hover{
+    background-color: #d8dfe6;
+
+}
+.input {
+    height: 60px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background-color: #f3f7fb;
+}
+
+.message_author {
+    margin-bottom: 10px;
+}
+
+.message_time{
+    float: right;
+    color: #b2b2b2;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.message_avatar{
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+.message_name{
+    vertical-align: middle;
+}
+
+input{
+    outline: none;
+    border: none;
+    width: calc(100% - 40px - 50px);
+    background-color: #f3f7fb;
+}
+
+.input_send{
+    margin-left: 10px;
+    display: inline-block;
+    background: url('/static/core/basic1-170_paper_plane-512.png') no-repeat center;
+    background-size: contain;
+    width: 27px;
+    height: 27px;
+    vertical-align: middle;
+    border: none;
+}
+
+.input_attach{
+    margin-right: 10px;
+    display: inline-block;
+    background: url('/static/core/PaperClip_4895.png') no-repeat center;
+    background-size: contain;
+    width: 27px;
+    height: 27px;
+    vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d8dfe6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8f9aa5;
+}
+
+a:link, a:visited {
+    padding: 14px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+a:hover, a:active {
+    color:  black;
+    text-decoration: underline;
+}
+
+header {
+    background-color: #d5d8dc;
+}
+
+.glyphicon-home {
+    margin-left: 10px;
+}
+
+.glyphicon-pencil {
+    margin-left: 20px;
+}
+
+.exit {
+    float: right;
+    margin-right: 10px;
+}
+
+.container {
+    width: 90%;
+}
+
+.form_padding{
+    padding-top: 40px;
+}
+
