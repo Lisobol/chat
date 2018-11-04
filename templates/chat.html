@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Чат{% endblock %}
+{% block userlog %}<span class="glyphicon glyphicon-pencil"></span>
+    <a href="/chat">Чат</a>
+    <span class="exit"> <span class="glyphicon glyphicon-log-out "></span>
+    <a href="/logout">Выйти</a></span><p >Вы вошли как: <span class="glyphicon glyphicon-user "></span>  {{ user.username }}</p>​{% endblock %}
+{% block content %}
+{#    <script type="text/javascript" src="{% static 'jquery-3.3.1.js'%}"></script>#}
+    <script src="{% static "jquery-3.3.1.js" %}"></script>
+    <script src="{% static "core/js/csrf.js" %}"></script>
+    <script src="{% static "core/js/scripts.js" %}"></script>
+
+
+    <div class="chat">
+        {% for m in messages %}
+            {% include "message.html" with message=m %}
+        {% endfor %}
+    </div>
+    <form class="input" class="message-form" id="message-form" action="{% url "message" %}" method="post">
+{#        <script src="{% static 'core/js/csrf.js' %}"></script>#}
+        {% csrf_token %}
+{#        <input type="file" name="file" class='input_attach' class='btn btn-light'></input>#}
+        <a role="button" class="btn btn-light" class="input_attach" href="/upload"></a>_
+{#        <button type="file" class='input_attach' class='btn btn-light'></button>#}
+        <input type="text" name="text" value="" placeholder="Enter message here"/>
+        <button type="submit" class='input_send' class='btn btn-light'></button>
+    </form>
+{% endblock %}
